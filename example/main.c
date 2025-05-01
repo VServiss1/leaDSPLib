@@ -10,7 +10,6 @@ short NewLEA_VAR *input;//input for the LEA
 LEA_STATUS status;// status variable to see if things are working
 int main(){  
     WDTCTL = WDTPW + WDTHOLD;//stop the watchdog, as it shouldnt exist in this program
-    PM5CTL0 &= ~LOCKLPM5;
     initLEA();// initalize lea
    // runt the numbers
     status = macBase(xValue,yValue, outputZ, input, 4);

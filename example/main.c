@@ -1,4 +1,4 @@
-#include "leaManipulation.h"
+#include "leaDSPLib.h"
 #include <msp430.h>
 #include <stdio.h>
 

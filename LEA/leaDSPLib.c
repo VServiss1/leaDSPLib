@@ -2,7 +2,7 @@
 // Made listening to https://youtu.be/LICi1VaK7Bk?si=ulWkbSiXxWM2Mf9y
 
 
-#include "leaManipulation.h"
+#include "leaDSPLib.h"
 
 void intitLEACommandTable(){
     LEACNF0 = 0; //This is intalizing the First configure register, to be in an on state by emptying it 

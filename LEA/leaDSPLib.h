@@ -12,8 +12,8 @@ Work left to do:
 allocation of the variables 
 */
 
-#ifndef LEAMANIPULATION_H
-#define LEAMANIPULATION_H
+#ifndef LEADSPLIB_H
+#define LEADSPLIB_H
 
 #include <msp430.h>
 #include <stdio.h>

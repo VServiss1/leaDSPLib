@@ -1,7 +1,5 @@
-// Basic LEA manipulation Library... LEA is not directly supported in this house :(
-// also turns out macOs doesnt support the DSP library whyyyyyy 
 // Created by Vanessa Serviss
-// Me when I lose executive function: https://youtu.be/LICi1VaK7Bk?si=ulWkbSiXxWM2Mf9y
+// Made listening to https://youtu.be/LICi1VaK7Bk?si=ulWkbSiXxWM2Mf9y
 
 
 #include "leaManipulation.h"

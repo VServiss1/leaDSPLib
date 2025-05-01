@@ -42,7 +42,6 @@ allocation of the variables
 #define leaAlignment(x, allign)   (!((uint32_t)(x) & ((allign)-1)))//This take the address and check if it has proper allignment based on n where n is the allignment 
 #define validAddress(x, allign)   (inRangeLeaMem(x) & leaAlignment(x,allign)) //This checks whether or not that this could be a valid address
 #define saturate(x, min, max)   (((x)>(max))?(max):(((x)<(min))?(min):(x)))
-#define bool char
 
 //deallocate and allocate memory onto the lea stack
 void* leaAllocateMem(unsigned short int size);
@@ -66,8 +65,14 @@ status checking for LEA so we can know whats happening
 */
 // status of lea
 typedef enum{
+    /*
+    implemented
+    */
     success = 0,
     leaBusy = 1,
+    /*
+    unimplemented
+    */
     shiftSizeError = 2,
     tableSizeError = 3,
     sizeError = 4,
@@ -75,6 +80,9 @@ typedef enum{
     leaOutOfRange = 6,
     leaScalarInconsistency = 7,
     leaCommandOverflow = 8,
+    /*
+    i dont think this one matters\
+    */
     leaIncorrectRevision = 9
 }LEA_STATUS;
 
@@ -87,7 +95,16 @@ void loopStatus( LEA_STATUS status); // LEACMDSTAT
 void loopSuccess(LEA_STATUS status);
 // This just gets lea status
 LEA_STATUS getStatus();
-bool codeInRam();
+int codeInRam();
+
+
+//This code is basic benchamrking for the DSP lib and starts a clock based
+void benchmarkStart();
+//stops the benchmarking 
+int benchmarkStop();
+
+
+
 
 // generic code loader
 // This generic will work for all but moveLongList though that would be possible if this used a struct system

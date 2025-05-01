@@ -37,11 +37,9 @@ void loopStatus(LEA_STATUS status){
     return;
 }
 void loopSuccess(LEA_STATUS status){
-    do{
+    while (status != success){
         status = getStatus();
-        __delay_cycles(800000L);
-        P1OUT ^= BIT1;
-    }while (status != success);
+    }
     return;
 }
 
@@ -52,13 +50,26 @@ LEA_STATUS getStatus(){
     return success;
 }
 
-bool codeInRam(){
+int codeInRam(){
     long int mask0 = LEACAP;
     if(mask0 &= LEAMSIZ_1 != 0){
         return true;
     }
     return false;
 }
+
+
+//This code is basic benchamrking for the DSP lib and starts a clock based USES TIMER A
+void benchmarkStart(){
+    TA0CTL = TASSEL__SMCLK + MC__UP;//
+    TA_CTL |= TACLR;
+}
+//stops the benchmarking and returns the amount of clock cycles since then USES TIMER A
+int benchmarkStop(){
+    TA0CTL &= ~MC_3
+    return TACTR;
+}
+
 
 
 LEA_STATUS loadCommand(short int commandNum, const short int *input){

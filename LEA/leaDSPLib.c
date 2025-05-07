@@ -56,7 +56,8 @@ int codeInRam(){
     return false;
 }
 
-
+/*
+has not been implemented yet -_-
 //This code is basic benchamrking for the DSP lib and starts a clock based USES TIMER A
 void benchmarkStart(){
     TA0CTL = TASSEL__SMCLK + MC__UP;//
@@ -67,7 +68,7 @@ int benchmarkStop(){
     TA0CTL &= MC_0;
     return 0;
 }
-
+*/
 
 
 LEA_STATUS loadCommand(short int commandNum, const short int *input){

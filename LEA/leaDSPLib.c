@@ -60,12 +60,12 @@ int codeInRam(){
 //This code is basic benchamrking for the DSP lib and starts a clock based USES TIMER A
 void benchmarkStart(){
     TA0CTL = TASSEL__SMCLK + MC__UP;//
-    TA_CTL |= TACLR;
+    TA0CTL |= TACLR;
 }
 //stops the benchmarking and returns the amount of clock cycles since then USES TIMER A
 int benchmarkStop(){
-    TA0CTL &= ~MC_3
-    return TACTR;
+    TA0CTL &= MC_0;
+    return 0;
 }
 
 

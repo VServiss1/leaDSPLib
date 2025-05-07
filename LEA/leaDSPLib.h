@@ -266,6 +266,7 @@ so this is the longer portion
 #define leaInUse 1 //idk I just want this
 #define true 1
 #define false 0
+#define LPMLOCK5 PM5CTL0 &= ~LOCKLPM5
 
 
 #endif

@@ -8,7 +8,8 @@ allocation
 commands
 some flag stuff 
 Work left to do:
-status
+statuses
+benchmarking
 */
 
 #ifndef LEADSPLIB_H

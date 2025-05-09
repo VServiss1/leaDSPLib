@@ -4,12 +4,11 @@ Created: Vanessa Serviss
 Made so far:
 Initialization for lea
 enabling low powermode
-status
 allocation 
 commands
 some flag stuff 
 Work left to do:
-allocation of the variables 
+status
 */
 
 #ifndef LEADSPLIB_H

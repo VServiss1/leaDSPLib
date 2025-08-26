@@ -11,7 +11,7 @@ LEA_STATUS status;// status variable to see if things are working
 int main(){  
     WDTCTL = WDTPW + WDTHOLD;//stop the watchdog, as it shouldnt exist in this program
     initLEA();// initalize lea
-   // runt the numbers
+   // run macBase which should take in 5 data points, the last one being the amount of inputs you have
     status = macBase(xValue,yValue, outputZ, input, 4);
     while(1);//while loop for fun
     return -1;
